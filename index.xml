@@ -15,5 +15,12 @@
       <guid>http://localhost:1313/linuxnoob/posts/thejourneybegins/</guid>
       <description>&lt;p&gt;For a long time, I resigned myself to never being a &amp;ldquo;computer person.&amp;rdquo; I wasn&amp;rsquo;t technology averse, but I had attempted to learn how to code on my own a couple times with no success. I assumed my brain &amp;ldquo;just doesn&amp;rsquo;t work that way.&amp;rdquo; But at a certain point, an unfinished history and english degree wasn&amp;rsquo;t looking like the key to wealth, so I reevaluated my options. It was 2022, and a Computer Science degree was talked about as a golden ticket to high-earning careers. With nothing else going for me, I figured it couldn&amp;rsquo;t hurt to give it one more (serious) try.&lt;/p&gt;</description>
     </item>
+    <item>
+      <title>About Me</title>
+      <link>http://localhost:1313/linuxnoob/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/linuxnoob/about/</guid>
+      <description>&lt;p&gt;My name&amp;rsquo;s Emersen, and I&amp;rsquo;m currently a senior Computer Science student at Brooklyn College in NYC. The first time I went to college I was a history and english major, so it&amp;rsquo;s kind of shocking that I&amp;rsquo;ve ended up here.&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;m no expert at any of this stuff yet, but I&amp;rsquo;m trying my best! You can read more about my journey in &lt;a href=&#34;../posts/thejourneybegins/&#34;&gt;my first post&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>
