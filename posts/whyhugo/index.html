@@ -41,49 +41,47 @@
 <p><em>A more detailed step-by-step to come&hellip;</em></p>
 <h2 id="extra-shell-script-for-deployment">Extra: Shell Script for Deployment</h2>
 <p>Since I&rsquo;ve managing 2 separate repositories for the source code and deploying the site, I tried my hand at a shell script to automate the process.</p>
-<p>``
-#!/bin/bash</p>
-<pre><code># Exit on error
+<pre tabindex="0"><code>    #!/bin/bash
+    
+    # Exit on error
+    
+    set -e
 
-set -e
+    # Preserve .git folder in /public temporarily
+    
+    mv public/.git /tmp/public-git
 
-# Preserve .git folder in /public temporarily
+    # Built site
+    
+    echo &#34;Building site...&#34;
+    hugo --cleanDestinationDir
+    
+    # Restore .git
+    mv /tmp/public-git
+    public/.git
 
-mv public/.git /tmp/public-git
+    # Deploy to live GitHub pages site
+    
+    echo &#34;Deplying to GitHub Pages...&#34;
+    cd public
+    git add .
+    message=&#34;Rebuilt site $(date)&#34; # defualt if no commit message passed
+    if [ -n &#34;$*&#34;]; then
+        message=&#34;$*&#34;
+    fi
+    git commit -m &#34;$message&#34;
+    git push origin main
+    cd ..
 
-# Built site
+    # Backup source to linux-blog repo
+    
+    echo &#34;Backing up source...&#34;
+    git add .
+    git commit -m &#34;$message&#34;
+    git push origin main
 
-echo &quot;Building site...&quot;
-hugo --cleanDestinationDir
-
-# Restore .git
-mv /tmp/public-git
-public/.git
-
-# Deploy to live GitHub pages site
-
-echo &quot;Deplying to GitHub Pages...&quot;
-cd public
-git add .
-message=&quot;Rebuilt site $(date)&quot; # defualt if no commit message passed
-if [ -n &quot;$*&quot;]; then
-    message=&quot;$*&quot;
-fi
-git commit -m &quot;$message&quot;
-git push origin main
-cd ..
-
-# Backup source to linux-blog repo
-
-echo &quot;Backing up source...&quot;
-git add .
-git commit -m &quot;$message&quot;
-git push origin main
-
-echo &quot;Complete.&quot;
-</code></pre>
-<p>``</p>
-<p>*More explanation of script to come&hellip;</p>
+    echo &#34;Complete.&#34;
+</code></pre><p><em>More explanation of script to come&hellip;</em></p>
 
 </main>
 
