@@ -2,19 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/linuxnoob/</loc>
+    <loc>https://ebribi.github.io/linuxnoob/posts/</loc>
+    <lastmod>2025-10-04T18:34:18-04:00</lastmod>
+  </url><url>
+    <loc>https://ebribi.github.io/linuxnoob/posts/whyhugo/</loc>
+    <lastmod>2025-10-04T18:34:18-04:00</lastmod>
+  </url><url>
+    <loc>https://ebribi.github.io/linuxnoob/</loc>
     <lastmod>2025-10-04T11:15:33-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/linuxnoob/posts/</loc>
+    <loc>https://ebribi.github.io/linuxnoob/posts/thejourneybegins/</loc>
     <lastmod>2025-10-04T10:13:48-04:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/linuxnoob/posts/thejourneybegins/</loc>
-    <lastmod>2025-10-04T10:13:48-04:00</lastmod>
+    <loc>https://ebribi.github.io/linuxnoob/about/</loc>
   </url><url>
-    <loc>http://localhost:1313/linuxnoob/about/</loc>
+    <loc>https://ebribi.github.io/linuxnoob/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/linuxnoob/categories/</loc>
-  </url><url>
-    <loc>http://localhost:1313/linuxnoob/tags/</loc>
+    <loc>https://ebribi.github.io/linuxnoob/tags/</loc>
   </url>
 </urlset>
