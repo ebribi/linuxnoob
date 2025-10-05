@@ -35,10 +35,55 @@
 <p>From what I read, Jeykll is the native, go-to option for hosting static sites on GitHub Pages. I opted for Hugo instead because it would be less automated and force me to get familiar with using git locally.</p>
 <p>I created 2 repositories in my GitHub: <a href="https://github.com/ebribi/linux-blog">one</a> to store my source code, and <a href="https://github.com/ebribi/linuxnoob">the other</a> to deploy the site.</p>
 <h3 id="lesson-1---you-only-get-1-githubio">Lesson #1 - You only get 1 .github.io</h3>
-<p>And it must be your username. For me, this is ebribi.github.io. I restarted this project 3-4 times because I named the repository linuxnoob.github.io thinking that I could .github.io to my heart&rsquo;s desire. Sadly, you can&rsquo;t. So instead, the base URL is ebribi.github.io/linuxnoob. Any other sites I host with GitHub Pages that isn&rsquo;t ebribi.github.io will have a base URL of ebribi.github.io/[repo-name].</p>
+<p>And it must be your username. For me, this is <code>ebribi.github.io</code>. I restarted this project 3-4 times because I named the repository <code>linuxnoob.github.io</code> thinking that I could <code>.github.io</code> to my heart&rsquo;s desire. Sadly, you can&rsquo;t. So instead, the base URL is <code>ebribi.github.io/linuxnoob</code>. Any other sites I host with GitHub Pages that isn&rsquo;t <code>ebribi.github.io</code> will have a base URL of <code>ebribi.github.io/[repo-name]</code>.</p>
 <h2 id="setting-up">Setting Up</h2>
-<p>I decided to use the <a href="https://xmin.yihui.org/">Xmin</a> theme. Clean, simple. Good documentation, especially in the creator&rsquo;s <a href="https://bookdown.org/yihui/blogdown/hugo.html">blogdown book</a>.</p>
-<p><em>More to come&hellip;</em></p>
+<p>I decided to use the <a href="https://xmin.yihui.org/">Xmin</a> theme. Clean, simple. Good documentation, especially in the creator&rsquo;s <a href="https://bookdown.org/yihui/blogdown/hugo.html">blogdown book</a>. I cloned the repo (<a href="https://github.com/yihui/hugo-xmin.git">https://github.com/yihui/hugo-xmin.git</a>) to my /themes folder and added <code>theme=&quot;Xmin&quot;</code> to hugo.toml. At this point, I could run hugo serve to generate the site on a localhost and make sure everything was running fine.</p>
+<p><em>A more detailed step-by-step to come&hellip;</em></p>
+<h2 id="extra-shell-script-for-deployment">Extra: Shell Script for Deployment</h2>
+<p>Since I&rsquo;ve managing 2 separate repositories for the source code and deploying the site, I tried my hand at a shell script to automate the process.</p>
+<p>``
+#!/bin/bash</p>
+<pre><code># Exit on error
+
+set -e
+
+# Preserve .git folder in /public temporarily
+
+mv public/.git /tmp/public-git
+
+# Built site
+
+echo &quot;Building site...&quot;
+hugo --cleanDestinationDir
+
+# Restore .git
+mv /tmp/public-git
+public/.git
+
+# Deploy to live GitHub pages site
+
+echo &quot;Deplying to GitHub Pages...&quot;
+cd public
+git add .
+message=&quot;Rebuilt site $(date)&quot; # defualt if no commit message passed
+if [ -n &quot;$*&quot;]; then
+    message=&quot;$*&quot;
+fi
+git commit -m &quot;$message&quot;
+git push origin main
+cd ..
+
+# Backup source to linux-blog repo
+
+echo &quot;Backing up source...&quot;
+git add .
+git commit -m &quot;$message&quot;
+git push origin main
+
+echo &quot;Complete.&quot;
+</code></pre>
+<p>``</p>
+<p>*More explanation of script to come&hellip;</p>
 
 </main>
 
