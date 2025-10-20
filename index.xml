@@ -9,7 +9,7 @@
     <lastBuildDate>Sat, 04 Oct 2025 18:34:18 -0400</lastBuildDate>
     <atom:link href="https://ebribi.github.io/linuxnoob/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Why Hugo (and a little bash script to make deploying easier...)</title>
+      <title>Why Hugo (and a little shell script to make deploying easier...)</title>
       <link>https://ebribi.github.io/linuxnoob/posts/whyhugo/</link>
       <pubDate>Sat, 04 Oct 2025 18:34:18 -0400</pubDate>
       <guid>https://ebribi.github.io/linuxnoob/posts/whyhugo/</guid>
