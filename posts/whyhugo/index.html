@@ -32,10 +32,11 @@
 <main>
 <p>I wanted a fast, simple way to get this blog up and running. I also wanted to learn how I can host a site on GitHub since I 1) knew it was possible and 2) had never gotten the chance to do it.</p>
 <h2 id="hugo-vs-jekyll-and-github-pages">Hugo vs. Jekyll and GitHub Pages</h2>
-<p>From what I read, Jeykll is the native, go-to option for hosting static sites on GitHub Pages. I opted for Hugo instead because it would be less automated and force me to get familiar with using git locally.</p>
+<p>From what I read, Jeykll is the native, go-to option for hosting static sites on GitHub Pages. I opted for Hugo instead because it would be less automated and force me to get familiar with using git locally. At this stage in my programming journey, challenging myself is a massive investment that I&rsquo;ve already seen start to pay off.</p>
+<p>Another feature of Hugo that make it a strong decision down the line: it&rsquo;s  <strong>fast</strong>. Being written in Go and distributed a single executable makes means Hugo rebuilds my site quick. This might not be a huge deal now when I only have a couple of pages, but should the size of my blog grow, speed will matter.</p>
 <p>I created 2 repositories in my GitHub: <a href="https://github.com/ebribi/linux-blog">one</a> to store my source code, and <a href="https://github.com/ebribi/linuxnoob">the other</a> to deploy the site.</p>
-<h3 id="lesson-1---you-only-get-1-githubio">Lesson #1 - You only get 1 .github.io</h3>
-<p>And it must be your username. For me, this is <code>ebribi.github.io</code>. I restarted this project 3-4 times because I named the repository <code>linuxnoob.github.io</code> thinking that I could <code>.github.io</code> to my heart&rsquo;s desire. Sadly, you can&rsquo;t. So instead, the base URL is <code>ebribi.github.io/linuxnoob</code>. Any other sites I host with GitHub Pages that isn&rsquo;t <code>ebribi.github.io</code> will have a base URL of <code>ebribi.github.io/[repo-name]</code>.</p>
+<h2 id="lesson-learned---you-only-get-1-githubio">Lesson Learned - You only get 1 .github.io</h2>
+<p>And it must be your GitHub username. For me, this is <code>ebribi.github.io</code>. I restarted this project 3-4 times because I named the repository <code>linuxnoob.github.io</code> thinking that I could <code>.github.io</code> to my heart&rsquo;s desire. Sadly, you can&rsquo;t. So instead, the base URL is <code>ebribi.github.io/linuxnoob</code>. Any other sites I host with GitHub Pages that isn&rsquo;t <code>ebribi.github.io</code> will have a base URL of <code>ebribi.github.io/[repo-name]</code>.</p>
 <h2 id="setting-up">Setting Up</h2>
 <p>I decided to use the <a href="https://xmin.yihui.org/">Xmin</a> theme. Clean, simple. Good documentation, especially in the creator&rsquo;s <a href="https://bookdown.org/yihui/blogdown/hugo.html">blogdown book</a>. I cloned the repo (<a href="https://github.com/yihui/hugo-xmin.git">https://github.com/yihui/hugo-xmin.git</a>) to my /themes folder and added <code>theme=&quot;Xmin&quot;</code> to hugo.toml. At this point, I could run hugo serve to generate the site on a localhost and make sure everything was running fine.</p>
 <p><em>A more detailed step-by-step to come&hellip;</em></p>
@@ -120,7 +121,6 @@
     echo &#34;Complete.&#34;
 </code></pre><p>The script moves back to the project&rsquo;s root directory, stages all changes, creates a commit with the same message as before, and pushes this to the <code>linuxblog.git</code> repository that is the remote repo for the project&rsquo;s source code.</p>
 <p>Barring any errors along the way, both repositories have now been updated with the changes to the site and the source code.</p>
-<p><em>More to come&hellip;</em></p>
 
 </main>
 

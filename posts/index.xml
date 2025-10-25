@@ -13,7 +13,7 @@
       <link>https://ebribi.github.io/linuxnoob/posts/whyhugo/</link>
       <pubDate>Sat, 04 Oct 2025 18:34:18 -0400</pubDate>
       <guid>https://ebribi.github.io/linuxnoob/posts/whyhugo/</guid>
-      <description>&lt;p&gt;I wanted a fast, simple way to get this blog up and running. I also wanted to learn how I can host a site on GitHub since I 1) knew it was possible and 2) had never gotten the chance to do it.&lt;/p&gt;&#xA;&lt;h2 id=&#34;hugo-vs-jekyll-and-github-pages&#34;&gt;Hugo vs. Jekyll and GitHub Pages&lt;/h2&gt;&#xA;&lt;p&gt;From what I read, Jeykll is the native, go-to option for hosting static sites on GitHub Pages. I opted for Hugo instead because it would be less automated and force me to get familiar with using git locally.&lt;/p&gt;</description>
+      <description>&lt;p&gt;I wanted a fast, simple way to get this blog up and running. I also wanted to learn how I can host a site on GitHub since I 1) knew it was possible and 2) had never gotten the chance to do it.&lt;/p&gt;&#xA;&lt;h2 id=&#34;hugo-vs-jekyll-and-github-pages&#34;&gt;Hugo vs. Jekyll and GitHub Pages&lt;/h2&gt;&#xA;&lt;p&gt;From what I read, Jeykll is the native, go-to option for hosting static sites on GitHub Pages. I opted for Hugo instead because it would be less automated and force me to get familiar with using git locally. At this stage in my programming journey, challenging myself is a massive investment that I&amp;rsquo;ve already seen start to pay off.&lt;/p&gt;</description>
     </item>
     <item>
       <title>The Journey Begins</title>
